@@ -328,6 +328,7 @@ __attribute__((swift_name("TruvideoSdkInternalLogInterface")))
 __attribute__((swift_name("TruvideoSdkLogInterface")))
 @protocol SharedTruvideoSdkLogInterface
 @required
+- (void)clear __attribute__((swift_name("clear()")));
 - (void)dTag:(NSString *)tag message:(NSString *)message __attribute__((swift_name("d(tag:message:)")));
 - (void)eTag:(NSString *)tag message:(NSString *)message __attribute__((swift_name("e(tag:message:)")));
 - (void)iTag:(NSString *)tag message:(NSString *)message __attribute__((swift_name("i(tag:message:)")));
@@ -335,14 +336,11 @@ __attribute__((swift_name("TruvideoSdkLogInterface")))
 - (void)printTag:(NSString *)tag message:(NSString *)message severity:(SharedTruvideoSdkLogSeverity *)severity __attribute__((swift_name("print(tag:message:severity:)")));
 - (void)vTag:(NSString *)tag message:(NSString *)message __attribute__((swift_name("v(tag:message:)")));
 - (void)wTag:(NSString *)tag message:(NSString *)message __attribute__((swift_name("w(tag:message:)")));
-@property (readonly) int32_t errorFilesCount __attribute__((swift_name("errorFilesCount")));
+@property int64_t bufferFileSizeLimit __attribute__((swift_name("bufferFileSizeLimit")));
+@property (readonly) NSString *directoryPath __attribute__((swift_name("directoryPath")));
 @property (readonly) BOOL isSyncRunning __attribute__((swift_name("isSyncRunning")));
-@property (readonly) int32_t pendingFilesCount __attribute__((swift_name("pendingFilesCount")));
 @property SharedTruvideoSdkLogSeverity *severityLevel __attribute__((swift_name("severityLevel")));
 @property int64_t syncInterval __attribute__((swift_name("syncInterval")));
-@property (readonly) double tempFilePercentage __attribute__((swift_name("tempFilePercentage")));
-@property (readonly) int64_t tempFileSize __attribute__((swift_name("tempFileSize")));
-@property int64_t tempFileSizeLimit __attribute__((swift_name("tempFileSizeLimit")));
 @end
 
 __attribute__((swift_name("TruvideoSdkSettingInterface")))
@@ -381,6 +379,7 @@ __attribute__((swift_name("FileUtil")))
 - (BOOL)existsPath:(NSString *)path __attribute__((swift_name("exists(path:)")));
 - (NSString *)getCacheDirectoryPath __attribute__((swift_name("getCacheDirectoryPath()")));
 - (NSString *)getContentPath:(NSString *)path __attribute__((swift_name("getContent(path:)")));
+- (NSString *)getFileNamePath:(NSString *)path __attribute__((swift_name("getFileName(path:)")));
 - (NSArray<NSString *> *)getListPath:(NSString *)path __attribute__((swift_name("getList(path:)")));
 - (int64_t)getSizePath:(NSString *)path __attribute__((swift_name("getSize(path:)")));
 - (BOOL)isEmptyPath:(NSString *)path __attribute__((swift_name("isEmpty(path:)")));
