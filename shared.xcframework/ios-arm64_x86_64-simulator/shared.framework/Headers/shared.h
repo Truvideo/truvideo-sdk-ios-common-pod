@@ -6,9 +6,9 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class SharedTruvideoSdkCompanion, SharedTruvideoSdkConfiguration, SharedTruvideoSdk, SharedKotlinThrowable, SharedKotlinArray<T>, SharedKotlinException, SharedTruvideoSdkException, SharedApplicationForegroundCheckerUtil, SharedFileUtil, SharedSettingsFactory, SharedTruvideoSdkAuthenticationCompanion, SharedTruvideoSdkAuthentication, SharedKotlinEnumCompanion, SharedKotlinEnum<E>, SharedTruvideoSdkAuthenticationStatus, SharedTruvideoSdkLogConfiguration, SharedTruvideoSdkConfigurationCompanion, SharedTruvideoSdkHttpErrorResponseCompanion, SharedTruvideoSdkHttpErrorResponse, SharedTruvideoSdkHttpResponse, SharedTruvideoSdkIPResponseCompanion, SharedTruvideoSdkIPResponse, SharedTruvideoSdkLogSeverity, SharedTruvideoSdkLogModule, SharedTruvideoSdkLogCompanion, SharedTruvideoSdkLog, SharedTruvideoSdkLogConfigurationCompanion, SharedTruvideoSdkNetworkType, SharedTruvideoSdkSettingsCompanion, SharedTruvideoSdkSettings, SharedTruvideoSdkHttpServiceCompanion, SharedTruvideoSdkIPServiceCompanion, SharedTruvideoSdkIPService, SharedTruvideoSdkLogServiceCompanion, SharedTruvideoSdkLocalStorageServiceCompanion, SharedTruvideoSdkAuthServiceCompanion, SharedBuildConfig, SharedKotlinRuntimeException, SharedKotlinIllegalStateException, SharedKotlinx_serialization_coreSerializersModule, SharedKotlinx_serialization_coreSerialKind, SharedKotlinNothing;
+@class SharedTruvideoSdkCompanion, SharedTruvideoSdkConfiguration, SharedTruvideoSdk, SharedKotlinThrowable, SharedKotlinArray<T>, SharedKotlinException, SharedTruvideoSdkException, SharedTruvideoSdkAuthenticationCompanion, SharedTruvideoSdkAuthentication, SharedTruvideoSdkLogConfiguration, SharedTruvideoSdkConfigurationCompanion, SharedTruvideoSdkHttpErrorResponseCompanion, SharedTruvideoSdkHttpErrorResponse, SharedTruvideoSdkHttpResponse, SharedTruvideoSdkIPResponseCompanion, SharedTruvideoSdkIPResponse, SharedTruvideoSdkLogSeverity, SharedTruvideoSdkLogModule, SharedTruvideoSdkLogCompanion, SharedTruvideoSdkLog, SharedTruvideoSdkLogConfigurationCompanion, SharedKotlinEnumCompanion, SharedKotlinEnum<E>, SharedTruvideoSdkNetworkType, SharedTruvideoSdkStorageCredentials, SharedTruvideoSdkSettingsCompanion, SharedTruvideoSdkSettings, SharedTruvideoSdkStorageCredentialsCompanion, SharedTruvideoSdkHttpServiceCompanion, SharedTruvideoSdkIPServiceCompanion, SharedTruvideoSdkIPService, SharedTruvideoSdkLogServiceCompanion, SharedTruvideoSdkLocalStorageServiceCompanion, SharedTruvideoSdkAuthServiceCompanion, SharedBuildConfig, SharedKotlinRuntimeException, SharedKotlinIllegalStateException, SharedKotlinx_serialization_coreSerializersModule, SharedKotlinx_serialization_coreSerialKind, SharedKotlinNothing;
 
-@protocol SharedTruvideoSdkAuthServiceInterface, SharedTruvideoSdkHttpServiceInterface, SharedTruvideoSdkLocalStorageServiceInterface, SharedTruvideoSdkLogServiceInterface, SharedMultiplatform_settingsSettingsFactory, SharedKotlinx_serialization_coreKSerializer, SharedKotlinComparable, SharedTruvideoSdkIPServiceInterface, SharedTruvideoSdkLogFileUploadInterface, SharedKotlinIterator, SharedMultiplatform_settingsSettings, SharedKotlinx_serialization_coreEncoder, SharedKotlinx_serialization_coreSerialDescriptor, SharedKotlinx_serialization_coreSerializationStrategy, SharedKotlinx_serialization_coreDecoder, SharedKotlinx_serialization_coreDeserializationStrategy, SharedKotlinx_serialization_coreCompositeEncoder, SharedKotlinAnnotation, SharedKotlinx_serialization_coreCompositeDecoder, SharedKotlinx_serialization_coreSerializersModuleCollector, SharedKotlinKClass, SharedKotlinKDeclarationContainer, SharedKotlinKAnnotatedElement, SharedKotlinKClassifier;
+@protocol SharedTruvideoSdkAuthServiceInterface, SharedTruvideoSdkHttpServiceInterface, SharedTruvideoSdkLocalStorageServiceInterface, SharedTruvideoSdkLogServiceInterface, SharedKotlinx_serialization_coreKSerializer, SharedKotlinComparable, SharedTruvideoSdkIPServiceInterface, SharedTruvideoSdkLogFileUploadInterface, SharedKotlinIterator, SharedKotlinx_serialization_coreEncoder, SharedKotlinx_serialization_coreSerialDescriptor, SharedKotlinx_serialization_coreSerializationStrategy, SharedKotlinx_serialization_coreDecoder, SharedKotlinx_serialization_coreDeserializationStrategy, SharedKotlinx_serialization_coreCompositeEncoder, SharedKotlinAnnotation, SharedKotlinx_serialization_coreCompositeDecoder, SharedKotlinx_serialization_coreSerializersModuleCollector, SharedKotlinKClass, SharedKotlinKDeclarationContainer, SharedKotlinKAnnotatedElement, SharedKotlinKClassifier;
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
@@ -220,55 +220,6 @@ __attribute__((swift_name("TruvideoSdkExpiredTokenException")))
 - (instancetype)initWithMessage:(NSString *)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 @end
 
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("ApplicationForegroundCheckerUtil")))
-@interface SharedApplicationForegroundCheckerUtil : SharedBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)applicationForegroundCheckerUtil __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) SharedApplicationForegroundCheckerUtil *shared __attribute__((swift_name("shared")));
-@property (readonly) BOOL foreground __attribute__((swift_name("foreground")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("FileUtil")))
-@interface SharedFileUtil : SharedBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)fileUtil __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) SharedFileUtil *shared __attribute__((swift_name("shared")));
-- (void)deletePath:(NSString *)path __attribute__((swift_name("delete(path:)")));
-- (BOOL)existsPath:(NSString *)path __attribute__((swift_name("exists(path:)")));
-- (NSString *)getCacheDirectoryPath __attribute__((swift_name("getCacheDirectoryPath()")));
-- (NSString *)getContentPath:(NSString *)path __attribute__((swift_name("getContent(path:)")));
-- (NSString *)getFileExtensionPath:(NSString *)path __attribute__((swift_name("getFileExtension(path:)")));
-- (NSString *)getFileNamePath:(NSString *)path withExtension:(BOOL)withExtension __attribute__((swift_name("getFileName(path:withExtension:)")));
-- (NSArray<NSString *> *)getListPath:(NSString *)path __attribute__((swift_name("getList(path:)")));
-- (int64_t)getSizePath:(NSString *)path __attribute__((swift_name("getSize(path:)")));
-- (BOOL)isEmptyPath:(NSString *)path __attribute__((swift_name("isEmpty(path:)")));
-- (void)writePath:(NSString *)path content:(NSString *)content __attribute__((swift_name("write(path:content:)")));
-- (void)writeLinePath:(NSString *)path line:(NSString *)line __attribute__((swift_name("writeLine(path:line:)")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("SettingsFactory")))
-@interface SharedSettingsFactory : SharedBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)settingsFactory __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) SharedSettingsFactory *shared __attribute__((swift_name("shared")));
-- (id<SharedMultiplatform_settingsSettingsFactory>)create __attribute__((swift_name("create()")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("TimerUtil")))
-@interface SharedTimerUtil : SharedBase
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
-+ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-- (void)startInterval:(int64_t)interval callback:(void (^)(void))callback __attribute__((swift_name("start(interval:callback:)")));
-- (void)stop __attribute__((swift_name("stop()")));
-@end
-
 
 /**
  * @note annotations
@@ -298,37 +249,6 @@ __attribute__((swift_name("TruvideoSdkAuthentication.Companion")))
 @property (class, readonly, getter=shared) SharedTruvideoSdkAuthenticationCompanion *shared __attribute__((swift_name("shared")));
 - (SharedTruvideoSdkAuthentication *)fromJsonJson:(NSString *)json __attribute__((swift_name("fromJson(json:)")));
 - (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end
-
-__attribute__((swift_name("KotlinComparable")))
-@protocol SharedKotlinComparable
-@required
-- (int32_t)compareToOther:(id _Nullable)other __attribute__((swift_name("compareTo(other:)")));
-@end
-
-__attribute__((swift_name("KotlinEnum")))
-@interface SharedKotlinEnum<E> : SharedBase <SharedKotlinComparable>
-- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) SharedKotlinEnumCompanion *companion __attribute__((swift_name("companion")));
-- (int32_t)compareToOther:(E)other __attribute__((swift_name("compareTo(other:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSString *name __attribute__((swift_name("name")));
-@property (readonly) int32_t ordinal __attribute__((swift_name("ordinal")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("TruvideoSdkAuthenticationStatus")))
-@interface SharedTruvideoSdkAuthenticationStatus : SharedKotlinEnum<SharedTruvideoSdkAuthenticationStatus *>
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-@property (class, readonly) SharedTruvideoSdkAuthenticationStatus *authenticated __attribute__((swift_name("authenticated")));
-@property (class, readonly) SharedTruvideoSdkAuthenticationStatus *authenticationExpired __attribute__((swift_name("authenticationExpired")));
-@property (class, readonly) SharedTruvideoSdkAuthenticationStatus *notAuthenticated __attribute__((swift_name("notAuthenticated")));
-+ (SharedKotlinArray<SharedTruvideoSdkAuthenticationStatus *> *)values __attribute__((swift_name("values()")));
-@property (class, readonly) NSArray<SharedTruvideoSdkAuthenticationStatus *> *entries __attribute__((swift_name("entries")));
 @end
 
 
@@ -477,17 +397,21 @@ __attribute__((swift_name("TruvideoSdkLog.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("TruvideoSdkLogConfiguration")))
 @interface SharedTruvideoSdkLogConfiguration : SharedBase
-- (instancetype)initWithSyncInterval:(int64_t)syncInterval closeBufferFileInterval:(int64_t)closeBufferFileInterval printEnabled:(BOOL)printEnabled severityLevel:(SharedTruvideoSdkLogSeverity *)severityLevel bufferFileSize:(int64_t)bufferFileSize __attribute__((swift_name("init(syncInterval:closeBufferFileInterval:printEnabled:severityLevel:bufferFileSize:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithSyncInterval:(int64_t)syncInterval syncDelayInterval:(int64_t)syncDelayInterval closeBufferFileInterval:(int64_t)closeBufferFileInterval enabled:(BOOL)enabled printEnabled:(BOOL)printEnabled appendToFileEnabled:(BOOL)appendToFileEnabled severity:(SharedTruvideoSdkLogSeverity *)severity bufferFileSize:(int64_t)bufferFileSize debug:(BOOL)debug __attribute__((swift_name("init(syncInterval:syncDelayInterval:closeBufferFileInterval:enabled:printEnabled:appendToFileEnabled:severity:bufferFileSize:debug:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) SharedTruvideoSdkLogConfigurationCompanion *companion __attribute__((swift_name("companion")));
-- (SharedTruvideoSdkLogConfiguration *)doCopySyncInterval:(int64_t)syncInterval closeBufferFileInterval:(int64_t)closeBufferFileInterval printEnabled:(BOOL)printEnabled severityLevel:(SharedTruvideoSdkLogSeverity *)severityLevel bufferFileSize:(int64_t)bufferFileSize __attribute__((swift_name("doCopy(syncInterval:closeBufferFileInterval:printEnabled:severityLevel:bufferFileSize:)")));
+- (SharedTruvideoSdkLogConfiguration *)doCopySyncInterval:(int64_t)syncInterval syncDelayInterval:(int64_t)syncDelayInterval closeBufferFileInterval:(int64_t)closeBufferFileInterval enabled:(BOOL)enabled printEnabled:(BOOL)printEnabled appendToFileEnabled:(BOOL)appendToFileEnabled severity:(SharedTruvideoSdkLogSeverity *)severity bufferFileSize:(int64_t)bufferFileSize debug:(BOOL)debug __attribute__((swift_name("doCopy(syncInterval:syncDelayInterval:closeBufferFileInterval:enabled:printEnabled:appendToFileEnabled:severity:bufferFileSize:debug:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)toJson __attribute__((swift_name("toJson()")));
 - (NSString *)description __attribute__((swift_name("description()")));
+@property BOOL appendToFileEnabled __attribute__((swift_name("appendToFileEnabled")));
 @property int64_t bufferFileSize __attribute__((swift_name("bufferFileSize")));
 @property int64_t closeBufferFileInterval __attribute__((swift_name("closeBufferFileInterval")));
+@property BOOL debug __attribute__((swift_name("debug")));
+@property BOOL enabled __attribute__((swift_name("enabled")));
 @property BOOL printEnabled __attribute__((swift_name("printEnabled")));
-@property SharedTruvideoSdkLogSeverity *severityLevel __attribute__((swift_name("severityLevel")));
+@property SharedTruvideoSdkLogSeverity *severity __attribute__((swift_name("severity")));
+@property int64_t syncDelayInterval __attribute__((swift_name("syncDelayInterval")));
 @property int64_t syncInterval __attribute__((swift_name("syncInterval")));
 @end
 
@@ -500,6 +424,24 @@ __attribute__((swift_name("TruvideoSdkLogConfiguration.Companion")))
 @property (class, readonly, getter=shared) SharedTruvideoSdkLogConfigurationCompanion *shared __attribute__((swift_name("shared")));
 - (SharedTruvideoSdkLogConfiguration *)fromJsonJson:(NSString *)json __attribute__((swift_name("fromJson(json:)")));
 - (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end
+
+__attribute__((swift_name("KotlinComparable")))
+@protocol SharedKotlinComparable
+@required
+- (int32_t)compareToOther:(id _Nullable)other __attribute__((swift_name("compareTo(other:)")));
+@end
+
+__attribute__((swift_name("KotlinEnum")))
+@interface SharedKotlinEnum<E> : SharedBase <SharedKotlinComparable>
+- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) SharedKotlinEnumCompanion *companion __attribute__((swift_name("companion")));
+- (int32_t)compareToOther:(E)other __attribute__((swift_name("compareTo(other:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString *name __attribute__((swift_name("name")));
+@property (readonly) int32_t ordinal __attribute__((swift_name("ordinal")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -558,14 +500,16 @@ __attribute__((swift_name("TruvideoSdkNetworkType")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("TruvideoSdkSettings")))
 @interface SharedTruvideoSdkSettings : SharedBase
-- (instancetype)initWithCameraModule:(BOOL)cameraModule noiseCancelling:(BOOL)noiseCancelling __attribute__((swift_name("init(cameraModule:noiseCancelling:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithCameraModule:(BOOL)cameraModule noiseCancelling:(BOOL)noiseCancelling mediaStorageCredentials:(SharedTruvideoSdkStorageCredentials * _Nullable)mediaStorageCredentials logStorageCredentials:(SharedTruvideoSdkStorageCredentials * _Nullable)logStorageCredentials __attribute__((swift_name("init(cameraModule:noiseCancelling:mediaStorageCredentials:logStorageCredentials:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) SharedTruvideoSdkSettingsCompanion *companion __attribute__((swift_name("companion")));
-- (SharedTruvideoSdkSettings *)doCopyCameraModule:(BOOL)cameraModule noiseCancelling:(BOOL)noiseCancelling __attribute__((swift_name("doCopy(cameraModule:noiseCancelling:)")));
+- (SharedTruvideoSdkSettings *)doCopyCameraModule:(BOOL)cameraModule noiseCancelling:(BOOL)noiseCancelling mediaStorageCredentials:(SharedTruvideoSdkStorageCredentials * _Nullable)mediaStorageCredentials logStorageCredentials:(SharedTruvideoSdkStorageCredentials * _Nullable)logStorageCredentials __attribute__((swift_name("doCopy(cameraModule:noiseCancelling:mediaStorageCredentials:logStorageCredentials:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)toJson __attribute__((swift_name("toJson()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) BOOL cameraModule __attribute__((swift_name("cameraModule")));
+@property (readonly) SharedTruvideoSdkStorageCredentials * _Nullable logStorageCredentials __attribute__((swift_name("logStorageCredentials")));
+@property (readonly) SharedTruvideoSdkStorageCredentials * _Nullable mediaStorageCredentials __attribute__((swift_name("mediaStorageCredentials")));
 @property (readonly) BOOL noiseCancelling __attribute__((swift_name("noiseCancelling")));
 @end
 
@@ -577,6 +521,39 @@ __attribute__((swift_name("TruvideoSdkSettings.Companion")))
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) SharedTruvideoSdkSettingsCompanion *shared __attribute__((swift_name("shared")));
 - (SharedTruvideoSdkSettings *)fromJsonJson:(NSString *)json __attribute__((swift_name("fromJson(json:)")));
+- (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end
+
+
+/**
+ * @note annotations
+ *   kotlinx.serialization.Serializable
+*/
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TruvideoSdkStorageCredentials")))
+@interface SharedTruvideoSdkStorageCredentials : SharedBase
+- (instancetype)initWithPoolId:(NSString *)poolId region:(NSString *)region bucketName:(NSString *)bucketName folder:(NSString *)folder accelerate:(BOOL)accelerate __attribute__((swift_name("init(poolId:region:bucketName:folder:accelerate:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) SharedTruvideoSdkStorageCredentialsCompanion *companion __attribute__((swift_name("companion")));
+- (SharedTruvideoSdkStorageCredentials *)doCopyPoolId:(NSString *)poolId region:(NSString *)region bucketName:(NSString *)bucketName folder:(NSString *)folder accelerate:(BOOL)accelerate __attribute__((swift_name("doCopy(poolId:region:bucketName:folder:accelerate:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)toJson __attribute__((swift_name("toJson()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) BOOL accelerate __attribute__((swift_name("accelerate")));
+@property (readonly) NSString *bucketName __attribute__((swift_name("bucketName")));
+@property (readonly) NSString *folder __attribute__((swift_name("folder")));
+@property (readonly) NSString *poolId __attribute__((swift_name("poolId")));
+@property (readonly) NSString *region __attribute__((swift_name("region")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TruvideoSdkStorageCredentials.Companion")))
+@interface SharedTruvideoSdkStorageCredentialsCompanion : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedTruvideoSdkStorageCredentialsCompanion *shared __attribute__((swift_name("shared")));
+- (SharedTruvideoSdkStorageCredentials *)fromJsonJson:(NSString *)json __attribute__((swift_name("fromJson(json:)")));
 - (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end
 
@@ -675,12 +652,12 @@ __attribute__((swift_name("TruvideoSdkLogServiceInterface")))
 - (void)iTag:(NSString *)tag message:(NSString *)message module:(SharedTruvideoSdkLogModule * _Nullable)module moduleVersion:(NSString *)moduleVersion __attribute__((swift_name("i(tag:message:module:moduleVersion:)")));
 - (void)doInitServiceUploadFileHandler:(id<SharedTruvideoSdkLogFileUploadInterface>)uploadFileHandler __attribute__((swift_name("doInitService(uploadFileHandler:)")));
 - (void)printLog:(SharedTruvideoSdkLog *)log __attribute__((swift_name("print(log:)")));
+- (void)printMultipleLogs:(NSArray<SharedTruvideoSdkLog *> *)logs __attribute__((swift_name("printMultiple(logs:)")));
 - (void)startService __attribute__((swift_name("startService()")));
 - (void)stopService __attribute__((swift_name("stopService()")));
 - (void)vTag:(NSString *)tag message:(NSString *)message module:(SharedTruvideoSdkLogModule * _Nullable)module moduleVersion:(NSString *)moduleVersion __attribute__((swift_name("v(tag:message:module:moduleVersion:)")));
 - (void)wTag:(NSString *)tag message:(NSString *)message module:(SharedTruvideoSdkLogModule * _Nullable)module moduleVersion:(NSString *)moduleVersion __attribute__((swift_name("w(tag:message:module:moduleVersion:)")));
 @property (readonly) NSString *directoryPath __attribute__((swift_name("directoryPath")));
-@property (readonly) BOOL enabled __attribute__((swift_name("enabled")));
 @property (readonly) NSString *errorDirectoryPath __attribute__((swift_name("errorDirectoryPath")));
 @property (readonly) BOOL isServiceInit __attribute__((swift_name("isServiceInit")));
 @property (readonly) BOOL isServiceRunning __attribute__((swift_name("isServiceRunning")));
@@ -697,10 +674,10 @@ __attribute__((swift_name("TruvideoSdkLogService")))
 - (void)clear __attribute__((swift_name("clear()")));
 - (void)doInitServiceUploadFileHandler:(id<SharedTruvideoSdkLogFileUploadInterface>)uploadFileHandler __attribute__((swift_name("doInitService(uploadFileHandler:)")));
 - (void)printLog:(SharedTruvideoSdkLog *)log __attribute__((swift_name("print(log:)")));
+- (void)printMultipleLogs:(NSArray<SharedTruvideoSdkLog *> *)logs __attribute__((swift_name("printMultiple(logs:)")));
 - (void)startService __attribute__((swift_name("startService()")));
 - (void)stopService __attribute__((swift_name("stopService()")));
 @property (readonly) NSString *directoryPath __attribute__((swift_name("directoryPath")));
-@property (readonly) BOOL enabled __attribute__((swift_name("enabled")));
 @property (readonly) NSString *errorDirectoryPath __attribute__((swift_name("errorDirectoryPath")));
 @property (readonly) BOOL isServiceInit __attribute__((swift_name("isServiceInit")));
 @property (readonly) BOOL isServiceRunning __attribute__((swift_name("isServiceRunning")));
@@ -724,6 +701,7 @@ __attribute__((swift_name("TruvideoSdkLocalStorageServiceInterface")))
 @protocol SharedTruvideoSdkLocalStorageServiceInterface
 @required
 - (void)deleteKey:(NSString *)key __attribute__((swift_name("delete(key:)")));
+- (NSArray<NSString *> *)getKeys __attribute__((swift_name("getKeys()")));
 - (BOOL)readBooleanKey:(NSString *)key defaultValue:(BOOL)defaultValue __attribute__((swift_name("readBoolean(key:defaultValue:)")));
 - (int32_t)readIntKey:(NSString *)key defaultValue:(int32_t)defaultValue __attribute__((swift_name("readInt(key:defaultValue:)")));
 - (int64_t)readLongKey:(NSString *)key defaultValue:(int64_t)defaultValue __attribute__((swift_name("readLong(key:defaultValue:)")));
@@ -739,6 +717,7 @@ __attribute__((swift_name("TruvideoSdkLocalStorageService")))
 @interface SharedTruvideoSdkLocalStorageService : SharedBase <SharedTruvideoSdkLocalStorageServiceInterface>
 @property (class, readonly, getter=companion) SharedTruvideoSdkLocalStorageServiceCompanion *companion __attribute__((swift_name("companion")));
 - (void)deleteKey:(NSString *)key __attribute__((swift_name("delete(key:)")));
+- (NSArray<NSString *> *)getKeys __attribute__((swift_name("getKeys()")));
 - (BOOL)readBooleanKey:(NSString *)key defaultValue:(BOOL)defaultValue __attribute__((swift_name("readBoolean(key:defaultValue:)")));
 - (int32_t)readIntKey:(NSString *)key defaultValue:(int32_t)defaultValue __attribute__((swift_name("readInt(key:defaultValue:)")));
 - (int64_t)readLongKey:(NSString *)key defaultValue:(int64_t)defaultValue __attribute__((swift_name("readLong(key:defaultValue:)")));
@@ -774,13 +753,18 @@ __attribute__((swift_name("TruvideoSdkAuthServiceInterface")))
  * @note This method converts instances of TruvideoSdkAuthenticationRequiredException, TruvideoSdkExpiredTokenException, TruvideoSdkException, CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (void)refreshAuthenticationForceRefresh:(BOOL)forceRefresh completionHandler:(void (^)(SharedTruvideoSdkAuthentication * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("refreshAuthentication(forceRefresh:completionHandler:)")));
-- (BOOL)shouldCallAuthenticateApiKey:(NSString *)apiKey __attribute__((swift_name("shouldCallAuthenticate(apiKey:)")));
+- (void)doInitForceRefresh:(BOOL)forceRefresh simulateExpiredTokenException:(BOOL)simulateExpiredTokenException completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("doInit(forceRefresh:simulateExpiredTokenException:completionHandler:)")));
+
+/**
+ * @note This method converts instances of TruvideoSdkAuthenticationRequiredException, TruvideoSdkExpiredTokenException, TruvideoSdkException, CancellationException to errors.
+ * Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)refreshAuthenticationForceRefresh:(BOOL)forceRefresh simulateExpiredTokenException:(BOOL)simulateExpiredTokenException completionHandler:(void (^)(SharedTruvideoSdkAuthentication * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("refreshAuthentication(forceRefresh:simulateExpiredTokenException:completionHandler:)")));
+@property (readonly) NSString *apiKey __attribute__((swift_name("apiKey")));
 @property (readonly) SharedTruvideoSdkAuthentication * _Nullable authentication __attribute__((swift_name("authentication")));
 @property (readonly) BOOL isAuthenticated __attribute__((swift_name("isAuthenticated")));
 @property (readonly) BOOL isAuthenticationExpired __attribute__((swift_name("isAuthenticationExpired")));
 @property (readonly) SharedTruvideoSdkSettings * _Nullable settings __attribute__((swift_name("settings")));
-@property (readonly) SharedTruvideoSdkAuthenticationStatus *status __attribute__((swift_name("status")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -799,13 +783,18 @@ __attribute__((swift_name("TruvideoSdkAuthService")))
  * @note This method converts instances of TruvideoSdkAuthenticationRequiredException, TruvideoSdkExpiredTokenException, TruvideoSdkException, CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (void)refreshAuthenticationForceRefresh:(BOOL)forceRefresh completionHandler:(void (^)(SharedTruvideoSdkAuthentication * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("refreshAuthentication(forceRefresh:completionHandler:)")));
-- (BOOL)shouldCallAuthenticateApiKey:(NSString *)apiKey __attribute__((swift_name("shouldCallAuthenticate(apiKey:)")));
-@property (readonly) SharedTruvideoSdkAuthentication * _Nullable authentication __attribute__((swift_name("authentication")));
+- (void)doInitForceRefresh:(BOOL)forceRefresh simulateExpiredTokenException:(BOOL)simulateExpiredTokenException completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("doInit(forceRefresh:simulateExpiredTokenException:completionHandler:)")));
+
+/**
+ * @note This method converts instances of TruvideoSdkAuthenticationRequiredException, TruvideoSdkExpiredTokenException, TruvideoSdkException, CancellationException to errors.
+ * Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)refreshAuthenticationForceRefresh:(BOOL)forceRefresh simulateExpiredTokenException:(BOOL)simulateExpiredTokenException completionHandler:(void (^)(SharedTruvideoSdkAuthentication * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("refreshAuthentication(forceRefresh:simulateExpiredTokenException:completionHandler:)")));
+@property (readonly) NSString *apiKey __attribute__((swift_name("apiKey")));
+@property SharedTruvideoSdkAuthentication * _Nullable authentication __attribute__((swift_name("authentication")));
 @property (readonly) BOOL isAuthenticated __attribute__((swift_name("isAuthenticated")));
 @property (readonly) BOOL isAuthenticationExpired __attribute__((swift_name("isAuthenticationExpired")));
 @property (readonly) SharedTruvideoSdkSettings * _Nullable settings __attribute__((swift_name("settings")));
-@property (readonly) SharedTruvideoSdkAuthenticationStatus *status __attribute__((swift_name("status")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -826,7 +815,7 @@ __attribute__((swift_name("TruvideoSdkLogFileUploadInterface")))
  * @note This method converts instances of CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (void)uploadPath:(NSString *)path completionHandler:(void (^)(NSString * _Nullable_result, NSError * _Nullable))completionHandler __attribute__((swift_name("upload(path:completionHandler:)")));
+- (void)uploadPath:(NSString *)path credentials:(SharedTruvideoSdkStorageCredentials *)credentials completionHandler:(void (^)(NSString * _Nullable_result, NSError * _Nullable))completionHandler __attribute__((swift_name("upload(path:credentials:completionHandler:)")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -851,12 +840,6 @@ __attribute__((swift_name("KotlinArray")))
 - (id<SharedKotlinIterator>)iterator __attribute__((swift_name("iterator()")));
 - (void)setIndex:(int32_t)index value:(T _Nullable)value __attribute__((swift_name("set(index:value:)")));
 @property (readonly) int32_t size __attribute__((swift_name("size")));
-@end
-
-__attribute__((swift_name("Multiplatform_settingsSettingsFactory")))
-@protocol SharedMultiplatform_settingsSettingsFactory
-@required
-- (id<SharedMultiplatform_settingsSettings>)createName:(NSString * _Nullable)name __attribute__((swift_name("create(name:)")));
 @end
 
 __attribute__((swift_name("Kotlinx_serialization_coreSerializationStrategy")))
@@ -924,34 +907,6 @@ __attribute__((swift_name("KotlinIterator")))
 @required
 - (BOOL)hasNext __attribute__((swift_name("hasNext()")));
 - (id _Nullable)next __attribute__((swift_name("next()")));
-@end
-
-__attribute__((swift_name("Multiplatform_settingsSettings")))
-@protocol SharedMultiplatform_settingsSettings
-@required
-- (void)clear __attribute__((swift_name("clear()")));
-- (BOOL)getBooleanKey:(NSString *)key defaultValue:(BOOL)defaultValue __attribute__((swift_name("getBoolean(key:defaultValue:)")));
-- (SharedBoolean * _Nullable)getBooleanOrNullKey:(NSString *)key __attribute__((swift_name("getBooleanOrNull(key:)")));
-- (double)getDoubleKey:(NSString *)key defaultValue:(double)defaultValue __attribute__((swift_name("getDouble(key:defaultValue:)")));
-- (SharedDouble * _Nullable)getDoubleOrNullKey:(NSString *)key __attribute__((swift_name("getDoubleOrNull(key:)")));
-- (float)getFloatKey:(NSString *)key defaultValue:(float)defaultValue __attribute__((swift_name("getFloat(key:defaultValue:)")));
-- (SharedFloat * _Nullable)getFloatOrNullKey:(NSString *)key __attribute__((swift_name("getFloatOrNull(key:)")));
-- (int32_t)getIntKey:(NSString *)key defaultValue:(int32_t)defaultValue __attribute__((swift_name("getInt(key:defaultValue:)")));
-- (SharedInt * _Nullable)getIntOrNullKey:(NSString *)key __attribute__((swift_name("getIntOrNull(key:)")));
-- (int64_t)getLongKey:(NSString *)key defaultValue:(int64_t)defaultValue __attribute__((swift_name("getLong(key:defaultValue:)")));
-- (SharedLong * _Nullable)getLongOrNullKey:(NSString *)key __attribute__((swift_name("getLongOrNull(key:)")));
-- (NSString *)getStringKey:(NSString *)key defaultValue:(NSString *)defaultValue __attribute__((swift_name("getString(key:defaultValue:)")));
-- (NSString * _Nullable)getStringOrNullKey:(NSString *)key __attribute__((swift_name("getStringOrNull(key:)")));
-- (BOOL)hasKeyKey:(NSString *)key __attribute__((swift_name("hasKey(key:)")));
-- (void)putBooleanKey:(NSString *)key value:(BOOL)value __attribute__((swift_name("putBoolean(key:value:)")));
-- (void)putDoubleKey:(NSString *)key value:(double)value __attribute__((swift_name("putDouble(key:value:)")));
-- (void)putFloatKey:(NSString *)key value:(float)value __attribute__((swift_name("putFloat(key:value:)")));
-- (void)putIntKey:(NSString *)key value:(int32_t)value __attribute__((swift_name("putInt(key:value:)")));
-- (void)putLongKey:(NSString *)key value:(int64_t)value __attribute__((swift_name("putLong(key:value:)")));
-- (void)putStringKey:(NSString *)key value:(NSString *)value __attribute__((swift_name("putString(key:value:)")));
-- (void)removeKey:(NSString *)key __attribute__((swift_name("remove(key:)")));
-@property (readonly) NSSet<NSString *> *keys __attribute__((swift_name("keys")));
-@property (readonly) int32_t size __attribute__((swift_name("size")));
 @end
 
 __attribute__((swift_name("Kotlinx_serialization_coreEncoder")))
