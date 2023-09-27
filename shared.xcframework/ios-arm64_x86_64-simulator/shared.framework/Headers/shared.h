@@ -748,6 +748,7 @@ __attribute__((swift_name("TruvideoSdkAuthServiceInterface")))
 */
 - (void)authenticateApiKey:(NSString *)apiKey payload:(NSString *)payload signature:(NSString *)signature forceRefresh:(BOOL)forceRefresh completionHandler:(void (^)(SharedTruvideoSdkAuthentication * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("authenticate(apiKey:payload:signature:forceRefresh:completionHandler:)")));
 - (void)clear __attribute__((swift_name("clear()")));
+- (NSString *)generatePayload __attribute__((swift_name("generatePayload()")));
 
 /**
  * @note This method converts instances of TruvideoSdkAuthenticationRequiredException, TruvideoSdkExpiredTokenException, TruvideoSdkException, CancellationException to errors.
@@ -778,6 +779,7 @@ __attribute__((swift_name("TruvideoSdkAuthService")))
 */
 - (void)authenticateApiKey:(NSString *)apiKey payload:(NSString *)payload signature:(NSString *)signature forceRefresh:(BOOL)forceRefresh completionHandler:(void (^)(SharedTruvideoSdkAuthentication * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("authenticate(apiKey:payload:signature:forceRefresh:completionHandler:)")));
 - (void)clear __attribute__((swift_name("clear()")));
+- (NSString *)generatePayload __attribute__((swift_name("generatePayload()")));
 
 /**
  * @note This method converts instances of TruvideoSdkAuthenticationRequiredException, TruvideoSdkExpiredTokenException, TruvideoSdkException, CancellationException to errors.
